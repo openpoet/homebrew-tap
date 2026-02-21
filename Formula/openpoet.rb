@@ -5,21 +5,21 @@
 class Openpoet < Formula
   desc "Orchestrate Claude Code sessions across multiple projects"
   homepage "https://github.com/openpoet/openpoet"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.1/openpoet_0.1.1_darwin_amd64.tar.gz"
-      sha256 "f3bb597dba6222e6f6cb6fce81a714d41506e181a58171274693ac9ffd5002a0"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.2/openpoet_0.1.2_darwin_amd64.tar.gz"
+      sha256 "3deef7873e8dd136458ebeefe4f094e0e69b1dca4e695b75e2c50d331c9e55a4"
 
       def install
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.1/openpoet_0.1.1_darwin_arm64.tar.gz"
-      sha256 "11303ed36962c92a9aa1c56ab3c3706490ca50ec69bd3bd9195b88777a36f86c"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.2/openpoet_0.1.2_darwin_arm64.tar.gz"
+      sha256 "5da5a43eeeffc625fc764e0e4744468adda0bdf00447b6482e4d532412617ad8"
 
       def install
         bin.install "openpoet"
@@ -29,15 +29,15 @@ class Openpoet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.1/openpoet_0.1.1_linux_amd64.tar.gz"
-      sha256 "479fd954ce4949e95f0d27f5fe9408ff5a6f8cf204e82d44491daedc32ae676e"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.2/openpoet_0.1.2_linux_amd64.tar.gz"
+      sha256 "8879dd7cccb81fb16fc58173dc07b19ef5be242d66fb6700fcf83747ddfb8f32"
       def install
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.1/openpoet_0.1.1_linux_arm64.tar.gz"
-      sha256 "91d8f8380623acf9412b3f5a9e3de31c40374919c95395fbae5e7a49f3796bc5"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.2/openpoet_0.1.2_linux_arm64.tar.gz"
+      sha256 "d3e4c6d7577685fc8e7bc4af8d25c18c6384fe63ab29186f4039770f0f952a30"
       def install
         bin.install "openpoet"
       end
