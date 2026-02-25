@@ -5,21 +5,21 @@
 class Openpoet < Formula
   desc "Orchestrate Claude Code sessions across multiple projects"
   homepage "https://github.com/openpoet/openpoet"
-  version "0.1.12"
+  version "0.1.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.12/openpoet_0.1.12_darwin_amd64.tar.gz"
-      sha256 "b23d6adc774f742cd19a3e837fa091c65e9aa9c5ba7664d2c5953be3e68f0102"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.13/openpoet_0.1.13_darwin_amd64.tar.gz"
+      sha256 "93e01e34fc8e829e991b353e5a3ec547aa784fc8e33facb508c0a4360a12633a"
 
       define_method(:install) do
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.12/openpoet_0.1.12_darwin_arm64.tar.gz"
-      sha256 "17ce74141ee18552c6948b05734b7b9b69680e8b0b79878cfbb2c2c6f9181622"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.13/openpoet_0.1.13_darwin_arm64.tar.gz"
+      sha256 "3d6633a12b692a5787c27e618197f1768ec16fa811367bad8d47361feaac54fd"
 
       define_method(:install) do
         bin.install "openpoet"
@@ -29,15 +29,15 @@ class Openpoet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.12/openpoet_0.1.12_linux_amd64.tar.gz"
-      sha256 "8f3ba88281e2c7ae54977340fa8b85730b8b9af98bc6e0c47982318bacbff12d"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.13/openpoet_0.1.13_linux_amd64.tar.gz"
+      sha256 "2d7b642d83459e99c0ca1fe3c267812101bd3aeb5dec268f729133e1b993949e"
       define_method(:install) do
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.12/openpoet_0.1.12_linux_arm64.tar.gz"
-      sha256 "62fe998bbff1c27ab620c5458304a41a21ccd033c15241efdc7f5acc594e9c8b"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.13/openpoet_0.1.13_linux_arm64.tar.gz"
+      sha256 "81cb13c9a26b00efc4e086f9c54cde745310431ddd5e09bd64d7e9df73c98285"
       define_method(:install) do
         bin.install "openpoet"
       end
