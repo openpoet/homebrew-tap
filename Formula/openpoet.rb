@@ -5,21 +5,21 @@
 class Openpoet < Formula
   desc "Orchestrate Claude Code sessions across multiple projects"
   homepage "https://github.com/openpoet/openpoet"
-  version "0.1.14"
+  version "0.1.15"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.14/openpoet_0.1.14_darwin_amd64.tar.gz"
-      sha256 "b5a0f39dd4cf7ba2e5b2c3e7ff9c44756fffc7bc0f2f8a6be1ca9ab06b01a27d"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_darwin_amd64.tar.gz"
+      sha256 "380f6d4f6c232e31e61f9cc92aaa4a9308f5bc80d92fee54b5ba9b6701430fb2"
 
       define_method(:install) do
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.14/openpoet_0.1.14_darwin_arm64.tar.gz"
-      sha256 "07adfea1a1e3cbed34b3eb00cfa2828e2a8648b5483d93e93412722296903189"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_darwin_arm64.tar.gz"
+      sha256 "962a4cc14d95858aff6a1813d618f1aca94c94a00b11826f15ac63d6e232a92f"
 
       define_method(:install) do
         bin.install "openpoet"
@@ -29,15 +29,15 @@ class Openpoet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.14/openpoet_0.1.14_linux_amd64.tar.gz"
-      sha256 "6875fd3ad4153f75bd9931cd00037feae49ccd5fd145c7c887d5a3457b27b845"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_linux_amd64.tar.gz"
+      sha256 "88827e88ab079f6387103f9a839373bef6d4e943c52ea1ae83c7521d1d0d6b76"
       define_method(:install) do
         bin.install "openpoet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.14/openpoet_0.1.14_linux_arm64.tar.gz"
-      sha256 "36589a243863d63e3e024bf6dca05c1c60d110e20b71950625454f3c6fdebd5c"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_linux_arm64.tar.gz"
+      sha256 "eacdf042cdb802a9d0c895be90581958eda708bf386136517cbd51edbc0ec363"
       define_method(:install) do
         bin.install "openpoet"
       end
@@ -56,8 +56,7 @@ class Openpoet < Formula
       The web UI will be available at http://localhost:8080
       Data is stored in ~/.openpoet/
 
-      Note: Node.js 18+ is required for the Claude Agent SDK provider.
-      The sidecar scripts are embedded in the binary and auto-extracted on first run.
+      OpenPoet is a single binary with no runtime dependencies.
     EOS
   end
 
