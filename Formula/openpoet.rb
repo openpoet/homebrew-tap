@@ -5,41 +5,45 @@
 class Openpoet < Formula
   desc "Orchestrate Claude Code sessions across multiple projects"
   homepage "https://github.com/openpoet/openpoet"
-  version "0.1.15"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_darwin_amd64.tar.gz"
-      sha256 "380f6d4f6c232e31e61f9cc92aaa4a9308f5bc80d92fee54b5ba9b6701430fb2"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.2.0/openpoet_0.2.0_darwin_amd64.tar.gz"
+      sha256 "2ea2bc6f4b8056f8fbc6b5de07deb45e5814569528b81d7856a0395cde433162"
 
       define_method(:install) do
         bin.install "openpoet"
+        prefix.install "THIRD-PARTY-LICENSES.md"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_darwin_arm64.tar.gz"
-      sha256 "962a4cc14d95858aff6a1813d618f1aca94c94a00b11826f15ac63d6e232a92f"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.2.0/openpoet_0.2.0_darwin_arm64.tar.gz"
+      sha256 "c224373fc0fc52cbb5c679d65cb485291af686b0e220f9abb48c608f60e7d942"
 
       define_method(:install) do
         bin.install "openpoet"
+        prefix.install "THIRD-PARTY-LICENSES.md"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_linux_amd64.tar.gz"
-      sha256 "88827e88ab079f6387103f9a839373bef6d4e943c52ea1ae83c7521d1d0d6b76"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.2.0/openpoet_0.2.0_linux_amd64.tar.gz"
+      sha256 "1969b9b4025ac69f1a164069dfbd3c1038173f34d87cf34871d607015a57e496"
       define_method(:install) do
         bin.install "openpoet"
+        prefix.install "THIRD-PARTY-LICENSES.md"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openpoet/openpoet/releases/download/v0.1.15/openpoet_0.1.15_linux_arm64.tar.gz"
-      sha256 "eacdf042cdb802a9d0c895be90581958eda708bf386136517cbd51edbc0ec363"
+      url "https://github.com/openpoet/openpoet/releases/download/v0.2.0/openpoet_0.2.0_linux_arm64.tar.gz"
+      sha256 "620f4ed6538abdb945639df6aae474b740e84458f0baf5f75b51ce17c548a830"
       define_method(:install) do
         bin.install "openpoet"
+        prefix.install "THIRD-PARTY-LICENSES.md"
       end
     end
   end
